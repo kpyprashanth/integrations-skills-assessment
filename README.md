@@ -71,3 +71,18 @@ If everything is setup and running, let's pick a task from this list and get sta
 * I feel confident I left some accidental bugs in here (I promise there are no intentional gotchas in this assessment). If you find them, feel free to fix them.
 * There may be a better way to do some of the things I've done here. If you want to refactor something, feel free to! (just be prepared to tell me why your way is better so I can learn from it)
 
+
+## API Specifications
+1. Get planets with population greater than given number
+```127.0.0.1:8000/planets/limit/<int>```
+
+2. Get planet details in imperial units
+```127.0.0.1:8000/planets/3/?q=imperial```
+
+3. Get people with height less than given number
+```127.0.0.1:8000/people/height_less_than/<int>```
+
+4. Get people with eye color
+```127.0.0.1:8000/people/eye_color/<str>```
+
+5. Test cases added for both people and planets. Please check respective test_models.py files
