@@ -33,7 +33,7 @@ class Planet(models.Model):
         # No other units can be converted to Imperial units except distance
 
         # Kilometers to miles
-        self.diameter = self.diameter*0.621371
+        self.diameter = int(self.diameter*0.621371)
 
         for field in self._meta.get_fields():
             if field.name in self.unserializable_fields:
