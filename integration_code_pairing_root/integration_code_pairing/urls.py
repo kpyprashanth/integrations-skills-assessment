@@ -23,5 +23,6 @@ import planets
 urlpatterns = [
     path('', views.homepage),
     path('admin/', admin.site.urls),
-    path('planets/', include('planets.urls'))
+    path('planets/', include('planets.urls')),
+    path('people/', include('people.urls'))
 ]
