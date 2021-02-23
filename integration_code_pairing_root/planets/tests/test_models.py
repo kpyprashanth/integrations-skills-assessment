@@ -23,7 +23,26 @@ class PlanetTestCase(TestCase):
         p_dict = p.to_dict()
         self.assertEqual(p.id, 1)
         self.assertNotIn('id', p_dict)
-    
+
+    def test_planet_to_imperial(self):
+        p = Planet(
+            id=1,
+            planet_id=2,
+            name='Test Planet',
+            diameter=123456,
+            rotation_period=1,
+            orbital_period=365,
+            gravity='1',
+            population=6000000,
+            climate='tundra,desert,rainforest',
+            terrain='flat',
+            surface_water=8
+        )
+
+        imperial_dict = p.to_imperial()
+        # 123456*0.621371 = 76711
+        self.assertEqual(imperial_dict['diameter'], 76711)
+
     def test_planet_to_dict(self):
         expected_dict = {
             'planet_id': 2,
